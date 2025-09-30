@@ -3,7 +3,6 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { Container, Card, Form, Button, Alert, Spinner } from 'react-bootstrap';
 import { useForm } from 'react-hook-form';
 
-// Definición de campos fuera del componente
 const TASK_FIELDS = {
     title: { label: "Título de la Tarea", required: "El título es obligatorio.", maxLength: 50 },
     description: { label: "Descripción", required: "La descripción es obligatoria.", maxLength: 200 },
@@ -36,7 +35,7 @@ const TaskFormPage = ({ tasks, updateTask, createTask }) => {
             const dateOnly = taskToEdit.dueDate ? new Date(taskToEdit.dueDate).toISOString().substring(0, 10) : new Date().toISOString().substring(0, 10);
             reset({ ...taskToEdit, dueDate: dateOnly });
         } else if (!isEditing) {
-             // Reinicia el formulario si estamos en modo creación
+             // Reinicia el formulario  en modo creación
              const defaultDate = new Date().toISOString().substring(0, 10);
              reset({
                 title: '',
@@ -52,7 +51,7 @@ const TaskFormPage = ({ tasks, updateTask, createTask }) => {
         setIsSubmitting(true);
         setSubmitError(null);
         try {
-            // Convertimos la fecha a formato ISO string antes de guardar
+            // Convierte la fecha a formato ISO string antes de guardar
             const submissionData = { ...data, dueDate: new Date(data.dueDate).toISOString() };
             
             if (isEditing) {
@@ -81,10 +80,8 @@ const TaskFormPage = ({ tasks, updateTask, createTask }) => {
     // Función de utilidad para determinar el color de la cabecera
     const getCardHeaderColor = () => {
         if (isEditing) {
-            // Para edición, usa un color que combine con tu paleta (ej. Steel Blue)
             return '#669BBC';
         } else {
-            // Para creación, usa el color principal de la paleta (ej. Navy)
             return '#003049';
         }
     };

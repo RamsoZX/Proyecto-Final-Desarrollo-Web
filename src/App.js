@@ -1,19 +1,11 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-// Importaciones de Estilos y Firebase/Bootstrap (se gestionan en el componente principal)
-import './App.css'; // Importación de estilos globales (que crearemos en el siguiente paso)
-
-// Importar los componentes principales (de la carpeta components)
+import './App.css'; 
 import AppNavbar from './components/Navbar';
 import AppFooter from './components/Footer';
-
-// Importar las páginas (vistas) (de la carpeta pages)
 import HomePage from './pages/HomePage';
 import TaskFormPage from './pages/TaskFormPage';
 import TaskDetailPage from './pages/TaskDetailPage';
-
-// Importar el hook de lógica de datos (de la carpeta hooks)
 import useTasks from './hooks/useTasks'; 
 
 function App() {

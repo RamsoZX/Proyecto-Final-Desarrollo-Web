@@ -47,17 +47,17 @@ const TaskDetailPage = ({ tasks, deleteTask, updateTask }) => {
     // Función para asignar color HEX y etiqueta según prioridad/estado
     const getPriorityStyle = (priority) => {
         switch (priority) {
-            case 'Alta': return { color: 'white', backgroundColor: '#dc3545' }; // Rojo Brillante
-            case 'Media': return { color: 'white', backgroundColor: '#ffc107' }; // Azul Acero
-            case 'Baja': return { color: 'white', backgroundColor: '#0dcaf0' }; // Vino Tinto
+            case 'Alta': return { color: 'white', backgroundColor: '#dc3545' }; 
+            case 'Media': return { color: 'white', backgroundColor: '#ffc107' };
+            case 'Baja': return { color: 'white', backgroundColor: '#0dcaf0' };
             default: return { color: 'white', backgroundColor: '#003049' };
         }
     };
     
     const priorityStyle = getPriorityStyle(task.priority);
     const statusStyle = task.completed 
-        ? { color: 'white', backgroundColor: '#198754' } // Éxito de Bootstrap (Verde)
-        : { color: 'white', backgroundColor: '#6c757d' }; // Secundario de Bootstrap (Gris)
+        ? { color: 'white', backgroundColor: '#198754' } 
+        : { color: 'white', backgroundColor: '#6c757d' }; 
 
 
     return (
@@ -117,7 +117,7 @@ const TaskDetailPage = ({ tasks, deleteTask, updateTask }) => {
                     <Button 
                         variant="outline-primary" 
                         onClick={toggleCompleted}
-                        className="btn-action btn-detail" // Reusa el estilo de 'detalle' para darle color
+                        className="btn-action btn-detail" 
                     >
                         <FaClock className="me-2" />
                         {task.completed ? 'Marcar como Pendiente' : 'Marcar como Completada'}

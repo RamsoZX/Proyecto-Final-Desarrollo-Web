@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
 
-/* Paleta Fiery Ocean */
+/* Paleta elegida Fiery Ocean */
 :root {
     --color-navy: #003049;
     --color-cream: #FDF0D5;
@@ -79,8 +79,6 @@ body {
     transform: scale(0.98);
 }
 
-/* Colores de Botón de Prioridad (sobrescribe btn-primary, btn-danger, etc. si es necesario) */
-
 /* Botón/Tarjeta de DETALLE/PRIMARIO */
 .btn-detail {
     background-color: var(--color-navy);
@@ -88,7 +86,7 @@ body {
     color: white;
 }
 .btn-detail:hover {
-    background-color: #00507a; /* Tono más claro del navy */
+    background-color: #00507a; 
     border-color: #00507a;
     color: white;
 }
@@ -105,7 +103,6 @@ body {
     color: white;
 }
 
-/* Botón/Tarjeta EDITAR/WARNING (Usamos el azul acero) */
 .btn-edit {
     background-color: var(--color-steel-blue);
     border-color: var(--color-steel-blue);
@@ -118,7 +115,6 @@ body {
 }
 
 
-/* Utilidad para truncar texto */
 .text-truncate-3 {
     overflow: hidden;
     display: -webkit-box;
@@ -128,7 +124,6 @@ body {
     font-size: 0.95rem;
 }
 
-/* Alerta de 'No hay tareas' */
 .alert-info-custom {
     background-color: #fff8e8;
     border-color: var(--color-cream);

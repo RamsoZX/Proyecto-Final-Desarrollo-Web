@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 
 const AppNavbar = () => {
     return (
-        // Usamos la clase 'navbar-dark' definida en App.css para el color de fondo Azul Marino
         <Navbar expand="lg" className="navbar-dark shadow-lg mb-4">
             <Container>
                 <Navbar.Brand as={Link} to="/" className="fw-bold fs-4">
