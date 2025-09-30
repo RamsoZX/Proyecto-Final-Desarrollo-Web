@@ -1,38 +1,138 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+/* Paleta Fiery Ocean */
+:root {
+    --color-navy: #003049;
+    --color-cream: #FDF0D5;
+    --color-red: #C1121F;
+    --color-burgundy: #780000;
+    --color-steel-blue: #669BBC;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Configuración General */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-cream);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Estilos de la Barra de Navegación */
+.navbar-dark {
+    background-color: var(--color-navy) !important;
+    border-bottom: 3px solid var(--color-red);
+}
+.navbar-brand {
+    font-weight: 800 !important;
+    font-size: 1.6rem !important;
+    color: var(--color-cream) !important;
+}
+.nav-link {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+.nav-link:hover {
+    color: var(--color-red) !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Estilos de Contenido Principal */
+.list-title {
+    font-weight: 800; 
+    color: #00507a; 
+    
+    margin-bottom: 3rem !important; 
+    padding-top: 2rem; 
+    font-size: 2.8rem; 
+
+    text-shadow: 2px 2px 4px rgba(0, 48, 73, 0.2); 
 }
 
-.App-link {
-  color: #61dafb;
+/* Estilos de las Tarjetas de Tarea */
+.task-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    border: none;
+    background-color: white;
+}
+.task-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Estilos de Tareas Completadas */
+.task-completed {
+    background-color: #f7f3ed !important;
+    opacity: 0.7;
+    text-decoration: line-through;
+    border: 1px solid var(--color-steel-blue) !important;
+}
+.task-completed .card-text, .task-completed .text-muted {
+    color: #9ca3af !important;
+}
+
+/* Estilos de Botones Personalizados (btn-action) */
+.btn-action {
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-weight: 600;
+    transition: background-color 0.2s, transform 0.1s;
+    border: 1px solid transparent;
+}
+.btn-action:active {
+    transform: scale(0.98);
+}
+
+/* Colores de Botón de Prioridad (sobrescribe btn-primary, btn-danger, etc. si es necesario) */
+
+/* Botón/Tarjeta de DETALLE/PRIMARIO */
+.btn-detail {
+    background-color: var(--color-navy);
+    border-color: var(--color-navy);
+    color: white;
+}
+.btn-detail:hover {
+    background-color: #00507a; /* Tono más claro del navy */
+    border-color: #00507a;
+    color: white;
+}
+
+/* Botón/Tarjeta ELIMINAR/DANGER */
+.btn-delete {
+    background-color: var(--color-red);
+    border-color: var(--color-red);
+    color: white;
+}
+.btn-delete:hover {
+    background-color: #d82b3a; 
+    border-color: #d82b3a;
+    color: white;
+}
+
+/* Botón/Tarjeta EDITAR/WARNING (Usamos el azul acero) */
+.btn-edit {
+    background-color: var(--color-steel-blue);
+    border-color: var(--color-steel-blue);
+    color: white;
+}
+.btn-edit:hover {
+    background-color: #79aed4; 
+    border-color: #79aed4;
+    color: white;
+}
+
+
+/* Utilidad para truncar texto */
+.text-truncate-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    font-size: 0.95rem;
+}
+
+/* Alerta de 'No hay tareas' */
+.alert-info-custom {
+    background-color: #fff8e8;
+    border-color: var(--color-cream);
+    color: var(--color-navy);
+    border-radius: 10px;
+    font-size: 1.1rem;
 }
